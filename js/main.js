@@ -20,3 +20,16 @@ console.log(views);
 
 const sameviews = document.querySelectorAll(".view");
 console.log(sameviews);
+
+// Selecting Individual divs from a view
+
+const divs = view1.querySelectorAll("div");
+console.log(divs);
+
+const samedivs = view1.getElementsByTagName("div");
+console.log(samedivs);
+
+// Selecting Even divs specifically
+
+const evenDivs = view1.querySelectorAll("div:nth-of-type(2n)");
+console.log(evenDivs);
