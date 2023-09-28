@@ -87,6 +87,8 @@ while (view2.lastChild) {
   view2.lastChild.remove();
 }
 
+// Adding New Elements inside our Parent Element
+
 const createDivs = (parent, iter) => {
   const newDiv = document.createElement("div");
   newDiv.textContent = iter;
