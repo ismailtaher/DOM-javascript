@@ -72,3 +72,36 @@ console.log(evenDivs[0].nextSibling);
 console.log(evenDivs[0].nextElementSibling);
 console.log(evenDivs[0].previousSibling);
 console.log(evenDivs[0].previousElementSibling);
+
+// Adding to & Removing from The DOM
+
+view1.style.display = "none";
+view2.style.display = "flex";
+view2.style.flexDirection = "row";
+view2.style.flexWrap = "wrap";
+view2.style.margin = "10px";
+
+// Removing All Nodes Inside the Parent Element
+
+while (view2.lastChild) {
+  view2.lastChild.remove();
+}
+
+const createDivs = (parent, iter) => {
+  const newDiv = document.createElement("div");
+  newDiv.textContent = iter;
+  newDiv.style.backgroundColor = "#000";
+  newDiv.style.width = "100px";
+  newDiv.style.height = "100px";
+  newDiv.style.margin = "10px";
+  newDiv.style.display = "flex";
+  newDiv.style.justifyContent = "center";
+  newDiv.style.alignItems = "center";
+  parent.append(newDiv);
+};
+
+/* createDivs(view2, 10); */
+
+for (let i = 1; i <= 12; i++) {
+  createDivs(view2, i);
+}
