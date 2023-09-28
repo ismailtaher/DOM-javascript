@@ -33,3 +33,26 @@ console.log(samedivs);
 
 const evenDivs = view1.querySelectorAll("div:nth-of-type(2n)");
 console.log(evenDivs);
+
+// Changing the look/appearance of our page
+for (let i = 0; i < evenDivs.length; i++) {
+  evenDivs[i].style.backgroundColor = "darkblue";
+  /* evenDivs[i].style.width = "200px";
+  evenDivs[i].style.height = "200px"; */
+}
+
+// Changing the text inside our nav bar i.e. h1
+
+const navText = document.querySelector("nav h1");
+console.log(navText);
+navText.textContent = "Hello World!";
+
+// Adding new elements inside our html using DOM
+
+const navBar = document.querySelector("nav");
+navBar.innerHTML = `<h1>Hello!</h1> <p>This should align right</p>`;
+console.log(navBar);
+
+// Changing the justifyContent of the flex of our nav
+
+navBar.style.justifyContent = "space-between";
